@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class String
+{
+    char str[100];
+
+public:
+
+    // Default Constructor
+    String()
+    {
+        strcpy(str, "");
+    }
+
+    // Parameterized Constructor
+    String(char s[])
+    {
+        strcpy(str, s);
+    }
+
+    // Accept Function
+    void Accept()
+    {
+        cout << "Enter a string: ";
+        cin.getline(str, 100);
+    }
+
+    // Display Function
+    void Display()
+    {
+        cout << "String is: " << str << endl;
+    }
+
+    // Destructor
+    ~String()
+    {
+        cout << "Destructor called." << endl;
+    }
+};
+
+int main()
+{
+    String s1;
+
+    s1.Accept();
+
+    s1.Display();
+
+    return 0;
+}
